@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Show de Prêmios</title> 
+    <style>
+        ul{
+            padding-inline-start: 0px;
+        } 
+    </style>
+    <!--usei esse css só porque o menu lateral ficava com um espaço grande na esquerda e não dava pra centralizar o texto-->
+</head>
+
+<body>
+
+    <table border="0" width="100%" cellspacing="10px" >
+        <tbody>
+
+            <tr bgcolor="yellow"><!--primeira linha-->
+                <td colspan="3" align="center"> 
+                    <h1> <img src="https://www.cdn-national-lottery.co.uk/assets/wolff/logo-icon-d3be740b2a135c2bda2f2888ebac5bca.svg" width="20px" /> Show de Prêmios <img src="https://www.cdn-national-lottery.co.uk/assets/wolff/logo-icon-d3be740b2a135c2bda2f2888ebac5bca.svg" width="20px" /></h1>
+                    
+                </td>
+            </tr>
+
+            <tr bgcolor="#D8BFD8"><!--segunda linha-->
+                <td colspan="3" WIDTH="100%" ALIGN="center"> <h2>Escolha sua cor favorita e venha concorrer a vários prêmios! <br />
+                Preencha o formulário abaixo e boa sorte!</h2>  </td>
+            </tr>
+
+            <tr ><!--terceira linha-->
+                <td width="230px" align="center" bgcolor="pink"> <!--premios-->
+                    <h3>Prêmios da Semana!</h3> 
+                    <h4>Um milhão em barras de ouro</h4>
+                    <img src="ouro.png" alt="barras de ouro" width="80px">
+                    <h4>Um carro de luxo</h4>
+                    <img src="carro-esporte.png" alt="carro"  width="80px">
+                    <h4>Uma casa</h4>
+                    <img src="casa.png" alt="casa" width="80px">
+                </td>
+
+                <td> <!--formulario-->
+                    <form action="/pagina que vai receber os dados" method="POST"> 
+                        <div>
+                            <label for="name">Nome:</label> 
+                            <input type="text" id="name" placeholder="escreva seu nome" autofocus/><br /> 
+                        </div>
+                        <br />
+                        <div>
+                            <label for="anos">Idade:</label>
+                            <input type="number" min="18" max="100" step="1" value="18" required id=anos/>
+                        </div> 
+                        <br />
+                        <div>
+                            <label for="nasc">Nascimento:</label> 
+                            <input type="date" id="nasc" /><br /> 
+                        </div>
+                        <br />
+                        <div>
+                            <label for="sexo">Sexo</label> 
+                            <select name="sexo" id="sexo">
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="outros">Outros</option>
+                            </select>            
+                        </div>
+                        <br />
+                        <div>
+                            <label for="end">Endereço:</label>
+                            <input type="text" id="end" placeholder="Rua, nº, bairro e cidade" size="40px"/><br />
+                        </div>                         
+                        <br />
+                        <div>
+                            <label for="cor">Escolha sua cor da sorte:</label>
+                            <input type="color" id="cor"  size="10px" value="#FFFFFF"/><br />
+                        </div>        
+                        <br />
+                        <div>
+                            <label for="fone">Telefone:</label>
+                            <input type="tel" id="fone" pattern="^\d{2}-\d{5}-\d{4}$" title="XX-XXXXX-XXXX" placeholder="XX-XXXXX-XXXX"/> 
+                        </div>
+                        <br /> 
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" required /><br />
+                        </div>   
+                        <br />          
+                        <div>
+                            <label for="instagram">Instagram:</label>
+                            <input type="url" id="instagram" title="digite seu site do instagram" /><br />
+                        </div>
+                        <br />
+                        <div>
+                            <label for="pass">Senha</label>
+                            <input type="text" id="pass" pattern="[a-zA-Z0-9]+" title="digite sua senha de letras e números"/> 
+                        </div>
+                        <br />        
+                        <div>
+                            <label for="msg">Escreva sua mensagem de sorte:</label><br />
+                            <textarea id="msg"></textarea> <br />
+                        </div>
+                                                <br>
+                        <div>
+                            <label for="barra">Mostre o quanto você se sente sortudo hoje:</label><br />
+                            <input type="range" min="0" max="100" step="10" value="50" list="tickmarks"> <!--barra de escala (tipo volume)-->
+                                <datalist id="tickmarks">
+                                    <option value="0">
+                                    <option value="10">
+                                    <option value="20">
+                                    <option value="30">
+                                    <option value="40">
+                                    <option value="50">
+                                    <option value="60">
+                                    <option value="70">
+                                    <option value="80">
+                                    <option value="90">
+                                    <option value="100">
+                                </datalist>
+                        </div>
+                        <br />
+                        <div class="button">
+                            <button type="submit">Enviar Formulário</button>
+                        </div>
+                        
+                    </form> 
+                </td>
+
+                <td width="200px" bgcolor="#97FFFF" align="center"><!--links e regras-->
+                        <ul type="none"> <h3>Resultados anteriores </h3>
+                            <a href="link" target="_blank">
+                                <li>10/03/2021</li>
+                            </a>
+                            <a href="link" target="_blank">
+                                <li>03/03/2021</li>
+                            </a>
+                            <a href="link" target="_blank">
+                                <li>24/02/2021</li>
+                            </a>
+                        </ul>
+                        <br />
+
+                        <ul type="none"> <h3>Regras </h3>
+                            <li>Preencha o formulário corretamente.</li>
+                            <li>Escolha sua cor favorita.</li>
+                            <li>As três cores sorteadas levam um dos prêmio da semana.</li>
+                            <li>A idade mínima para participação é 18 anos.</li>
+
+                            </a>
+                        </ul>
+                    </td>
+                
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr height="100px"><!--quarta linha-->
+                <td colspan="3" align="center" bgcolor="#98FB98"> Período da campanha 11/03/2021 a 17/03/2021. <br />
+                Certificado de autorização SECAP/ME Nº. 04.011317/2020. <br />
+                Prêmios entregues em certificado de barras de ouro. Imagens meramente ilustrativas. </td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+
+</html>
